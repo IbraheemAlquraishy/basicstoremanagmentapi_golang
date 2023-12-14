@@ -1,8 +1,6 @@
 package services
 
 import (
-	"fmt"
-
 	"github.com/IbraheemAlquraishy/basicstoremanagmentapi_golang/configs"
 )
 
@@ -14,7 +12,7 @@ func Queryallproducts() []configs.Products {
 	for d.Next() {
 		var temp configs.Products
 		d.Scan(&temp.Id, &temp.Name, &temp.Quantity, &temp.Price)
-		fmt.Print(d)
+
 		p = append(p, temp)
 	}
 	return p

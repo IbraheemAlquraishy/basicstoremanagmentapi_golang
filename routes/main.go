@@ -9,6 +9,8 @@ func main() {
 
 	app := gin.Default()
 	app.GET("/products", controllers.Getallproducts)
+
+	app.POST("/order", controllers.Post_order)
 	app.Run("localhost:8000")
 
 }
