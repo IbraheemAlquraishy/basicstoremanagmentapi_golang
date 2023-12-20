@@ -8,9 +8,10 @@ import (
 
 func Getordersproduct(order configs.Postoder) configs.Products {
 	db := configs.GetDB()
-	res := db.QueryRow("select * from products where id=?", order.Productid)
+	res := db.QueryRow("select * from products where id=$1", order.Productid)
 	var product configs.Products
-	res.Scan(&product.Id, &product.Name, &product.Quantity, &product.Price)
+	res.Scan(&product.Id, &product.Name, &product.Quantity, &product.Price, &product.Img)
+	fmt.Println(product)
 	return product
 }
 

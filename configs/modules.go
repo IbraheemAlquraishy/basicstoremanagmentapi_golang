@@ -5,7 +5,7 @@ type Products struct {
 	Name     string
 	Quantity int
 	Price    float32
-	img      string
+	Img      string
 }
 
 type Order struct {
@@ -23,6 +23,12 @@ type Postoder struct {
 }
 
 type Login struct {
+	Name     string
+	Password string
+}
+
+type Admin struct {
+	Id       int
 	Name     string
 	Password string
 }

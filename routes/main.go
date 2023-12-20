@@ -13,7 +13,8 @@ func main() {
 	app.POST("/order", controllers.Post_order)
 
 	//admin panel
-	app.POST("/login", contro)
+	app.POST("/login", controllers.Login)
+	app.POST("/newadmin", controllers.Newadmin)
 	app.Run("localhost:8000")
 
 }
